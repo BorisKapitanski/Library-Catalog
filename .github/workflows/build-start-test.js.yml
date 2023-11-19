@@ -25,6 +25,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm install @playwright/test
-    - run: node server.js
     - run: npm start
+    - run: cd server
+    - run: node server.js
     - run: npx playwright test
