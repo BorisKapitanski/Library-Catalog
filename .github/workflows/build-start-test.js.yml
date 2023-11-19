@@ -25,6 +25,8 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm install @playwright/test
-    - run: node server/server.js
-    - run: npm start
+    - run: node server/server.js & npx wait-on http://localhost:3000
+    - run: npm start & npx wait-on http://localhost:5500
     - run: npx playwright test
+      env:
+        CI: true
