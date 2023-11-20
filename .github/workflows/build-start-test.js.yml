@@ -27,7 +27,7 @@ jobs:
     - run: npm install @playwright/test
     - run: node server.js &
       working-directory: server
-    - run: npm start
+    - run: npm start &
     - run: npx playwright test &
       working-directory: test/libraryCatalog.test.js
      
