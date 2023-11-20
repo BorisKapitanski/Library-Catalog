@@ -25,10 +25,9 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm install @playwright/test
-    - run: node server.js
+    - run: node server.js &
       working-directory: server
     - run: npm start
-    - run: npx playwright test
-      working-directory: test
-      env:
-        CI: true
+    - run: npx playwright test &
+      working-directory: test/libraryCatalog.test.js
+     
