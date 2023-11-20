@@ -29,5 +29,5 @@ jobs:
       working-directory: server
     - run: npm start &
     - run: npx playwright test &
-      working-directory: test/libraryCatalog.test.js
+    
      
